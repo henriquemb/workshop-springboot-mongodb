@@ -1,6 +1,6 @@
 package com.github.henriquemb.springboot_mongodb.resources;
 
-import com.github.henriquemb.springboot_mongodb.domain.User;
+import com.github.henriquemb.springboot_mongodb.dto.UserDTO;
 import com.github.henriquemb.springboot_mongodb.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,8 @@ public class UserResource {
     private UserService userService;
 
     @RequestMapping(method=RequestMethod.GET) // or @GetMapping
-    public ResponseEntity<List<User>> findAll() {
-        return ResponseEntity.ok(userService.findAll());
+    public ResponseEntity<List<UserDTO>> findAll() {
+        List<UserDTO> users = userService.findAll().stream().map(UserDTO::new).toList();
+        return ResponseEntity.ok(users);
     }
 }
