@@ -1,5 +1,6 @@
 package com.github.henriquemb.springboot_mongodb.domain;
 
+import com.github.henriquemb.springboot_mongodb.dto.AuthorDTO;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -19,12 +20,12 @@ public class Post implements Serializable {
     private String title;
     private String content;
 
-    private User author;
+    private AuthorDTO author;
 
     public Post() {
     }
 
-    public Post(String id, Date date, String title, String content, User author) {
+    public Post(String id, Date date, String title, String content, AuthorDTO author) {
         this.id = id;
         this.date = date;
         this.title = title;
@@ -64,11 +65,11 @@ public class Post implements Serializable {
         this.content = content;
     }
 
-    public User getAuthor() {
+    public AuthorDTO getAuthor() {
         return author;
     }
 
-    public void setAuthor(User author) {
+    public void setAuthor(AuthorDTO author) {
         this.author = author;
     }
 
