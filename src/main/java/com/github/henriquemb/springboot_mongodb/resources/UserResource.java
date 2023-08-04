@@ -1,5 +1,6 @@
 package com.github.henriquemb.springboot_mongodb.resources;
 
+import com.github.henriquemb.springboot_mongodb.domain.Post;
 import com.github.henriquemb.springboot_mongodb.domain.User;
 import com.github.henriquemb.springboot_mongodb.dto.UserDTO;
 import com.github.henriquemb.springboot_mongodb.services.UserService;
@@ -57,5 +58,11 @@ public class UserResource {
         UserDTO userDTO = new UserDTO(userService.update(user));
 
         return ResponseEntity.ok(userDTO);
+    }
+
+    @GetMapping(value="/{id}/posts")
+    public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+        User user = userService.findById(id);
+        return ResponseEntity.ok(user.getPosts());
     }
 }
