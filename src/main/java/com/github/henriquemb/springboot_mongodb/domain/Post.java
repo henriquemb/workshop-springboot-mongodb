@@ -25,7 +25,6 @@ public class Post implements Serializable {
     private String content;
     private AuthorDTO author;
 
-    @DBRef
     private List<CommentDTO> comments = new ArrayList<>();
 
     public Post() {
