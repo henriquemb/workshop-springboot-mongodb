@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.List;
 import java.util.TimeZone;
 
 @Configuration
@@ -40,5 +41,10 @@ public class Instantiation implements CommandLineRunner {
         Post post3 = new Post(null, sdf.parse("2023-06-18"), "#formei", "Minha formatura será hoje.", new AuthorDTO(alex));
 
         postRepository.saveAll(Arrays.asList(post1, post2, post3));
+
+        maria.getPosts().addAll(Arrays.asList(post1, post2));
+        alex.getPosts().add(post3);
+
+        userRepository.saveAll(Arrays.asList(maria, alex));
     }
 }
