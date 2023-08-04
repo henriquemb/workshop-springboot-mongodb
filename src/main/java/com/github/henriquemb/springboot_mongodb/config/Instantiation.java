@@ -3,6 +3,7 @@ package com.github.henriquemb.springboot_mongodb.config;
 import com.github.henriquemb.springboot_mongodb.domain.Post;
 import com.github.henriquemb.springboot_mongodb.domain.User;
 import com.github.henriquemb.springboot_mongodb.dto.AuthorDTO;
+import com.github.henriquemb.springboot_mongodb.dto.CommentDTO;
 import com.github.henriquemb.springboot_mongodb.repository.PostRepository;
 import com.github.henriquemb.springboot_mongodb.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.List;
 import java.util.TimeZone;
 
 @Configuration
@@ -46,5 +46,14 @@ public class Instantiation implements CommandLineRunner {
         alex.getPosts().add(post3);
 
         userRepository.saveAll(Arrays.asList(maria, alex));
+
+        CommentDTO comment1 = new CommentDTO(sdf.parse("2023-01-22"), "Boa viagem!", new AuthorDTO(alex));
+        CommentDTO comment2 = new CommentDTO(sdf.parse("2023-01-23"), "Aproveite!", new AuthorDTO(bob));
+        CommentDTO comment3 = new CommentDTO(sdf.parse("2023-06-18"), "Parabéns!", new AuthorDTO(maria));
+
+        post1.getComments().addAll(Arrays.asList(comment1, comment2));
+        post3.getComments().add(comment3);
+
+        postRepository.saveAll(Arrays.asList(post1, post3));
     }
 }
