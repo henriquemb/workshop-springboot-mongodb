@@ -1,6 +1,6 @@
-package com.github.henriquemb.springboot_mongodb.resources.exception;
+package com.github.henriquemb.workshopmongo.resources.exception;
 
-import com.github.henriquemb.springboot_mongodb.services.exception.ObjectNotFoundException;
+import com.github.henriquemb.workshopmongo.services.exception.ObjectNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

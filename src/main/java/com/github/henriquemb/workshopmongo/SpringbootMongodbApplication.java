@@ -1,4 +1,4 @@
-package com.github.henriquemb.springboot_mongodb;
+package com.github.henriquemb.workshopmongo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

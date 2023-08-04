@@ -1,11 +1,12 @@
-package com.github.henriquemb.springboot_mongodb.services;
+package com.github.henriquemb.workshopmongo.services;
 
-import com.github.henriquemb.springboot_mongodb.domain.Post;
-import com.github.henriquemb.springboot_mongodb.repository.PostRepository;
-import com.github.henriquemb.springboot_mongodb.services.exception.ObjectNotFoundException;
+import com.github.henriquemb.workshopmongo.domain.Post;
+import com.github.henriquemb.workshopmongo.repository.PostRepository;
+import com.github.henriquemb.workshopmongo.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,5 +31,11 @@ public class PostService {
 
     public List<Post> findContentByText(String text) {
         return postRepository.findContentByText(text);
+    }
+
+    public List<Post> fullSearch(String text, Date minDate, Date maxDate) {
+        maxDate = new Date(maxDate.getTime() + 24 * 60 * 60 * 1000);
+
+        return postRepository.fullSearch(text, minDate, maxDate);
     }
 }

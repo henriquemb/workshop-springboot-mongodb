@@ -1,4 +1,4 @@
-package com.github.henriquemb.springboot_mongodb.services.exception;
+package com.github.henriquemb.workshopmongo.services.exception;
 
 public class ObjectNotFoundException extends RuntimeException {
     public ObjectNotFoundException(String message) {

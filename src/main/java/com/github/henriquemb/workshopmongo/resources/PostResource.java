@@ -1,12 +1,13 @@
-package com.github.henriquemb.springboot_mongodb.resources;
+package com.github.henriquemb.workshopmongo.resources;
 
-import com.github.henriquemb.springboot_mongodb.domain.Post;
-import com.github.henriquemb.springboot_mongodb.resources.util.URL;
-import com.github.henriquemb.springboot_mongodb.services.PostService;
+import com.github.henriquemb.workshopmongo.domain.Post;
+import com.github.henriquemb.workshopmongo.resources.util.URL;
+import com.github.henriquemb.workshopmongo.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -33,6 +34,20 @@ public class PostResource {
         text = URL.decodeParams(text);
         List<Post> posts = postService.findContentByText(text);
 
+        return ResponseEntity.ok(posts);
+    }
+
+    @GetMapping(value="/search")
+    public ResponseEntity<List<Post>> fullSearch(
+            @RequestParam(value="text", defaultValue="") String text,
+            @RequestParam(value="minDate", defaultValue="") String minDate,
+            @RequestParam(value="maxDate", defaultValue="") String maxDate
+    ) {
+        text = URL.decodeParams(text);
+        Date min = URL.convertDate(minDate, new Date(0L));
+        Date max = URL.convertDate(maxDate, new Date());
+
+        List<Post> posts = postService.fullSearch(text, min, max);
         return ResponseEntity.ok(posts);
     }
 }

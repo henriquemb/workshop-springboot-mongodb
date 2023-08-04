@@ -1,6 +1,6 @@
-package com.github.henriquemb.springboot_mongodb.repository;
+package com.github.henriquemb.workshopmongo.repository;
 
-import com.github.henriquemb.springboot_mongodb.domain.User;
+import com.github.henriquemb.workshopmongo.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

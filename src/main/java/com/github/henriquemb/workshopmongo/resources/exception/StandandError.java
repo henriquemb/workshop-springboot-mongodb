@@ -1,4 +1,4 @@
-package com.github.henriquemb.springboot_mongodb.resources.exception;
+package com.github.henriquemb.workshopmongo.resources.exception;
 
 import java.io.Serial;
 import java.io.Serializable;

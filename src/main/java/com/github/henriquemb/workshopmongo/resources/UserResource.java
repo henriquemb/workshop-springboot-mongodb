@@ -1,9 +1,9 @@
-package com.github.henriquemb.springboot_mongodb.resources;
+package com.github.henriquemb.workshopmongo.resources;
 
-import com.github.henriquemb.springboot_mongodb.domain.Post;
-import com.github.henriquemb.springboot_mongodb.domain.User;
-import com.github.henriquemb.springboot_mongodb.dto.UserDTO;
-import com.github.henriquemb.springboot_mongodb.services.UserService;
+import com.github.henriquemb.workshopmongo.domain.Post;
+import com.github.henriquemb.workshopmongo.domain.User;
+import com.github.henriquemb.workshopmongo.dto.UserDTO;
+import com.github.henriquemb.workshopmongo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

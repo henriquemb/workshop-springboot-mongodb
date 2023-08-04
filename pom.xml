@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.github.henriquemb</groupId>
-    <artifactId>springboot_mongodb</artifactId>
+    <artifactId>workshopmongo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot_mongodb</name>
-    <description>springboot_mongodb</description>
+    <name>workshopmongo</name>
+    <description>Workshop Spring Boot com MongoDB</description>
     <properties>
         <java.version>17</java.version>
     </properties>

@@ -1,9 +1,8 @@
-package com.github.henriquemb.springboot_mongodb.domain;
+package com.github.henriquemb.workshopmongo.domain;
 
-import com.github.henriquemb.springboot_mongodb.dto.AuthorDTO;
-import com.github.henriquemb.springboot_mongodb.dto.CommentDTO;
+import com.github.henriquemb.workshopmongo.dto.AuthorDTO;
+import com.github.henriquemb.workshopmongo.dto.CommentDTO;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serial;

@@ -1,11 +1,11 @@
-package com.github.henriquemb.springboot_mongodb.config;
+package com.github.henriquemb.workshopmongo.config;
 
-import com.github.henriquemb.springboot_mongodb.domain.Post;
-import com.github.henriquemb.springboot_mongodb.domain.User;
-import com.github.henriquemb.springboot_mongodb.dto.AuthorDTO;
-import com.github.henriquemb.springboot_mongodb.dto.CommentDTO;
-import com.github.henriquemb.springboot_mongodb.repository.PostRepository;
-import com.github.henriquemb.springboot_mongodb.repository.UserRepository;
+import com.github.henriquemb.workshopmongo.domain.Post;
+import com.github.henriquemb.workshopmongo.domain.User;
+import com.github.henriquemb.workshopmongo.dto.AuthorDTO;
+import com.github.henriquemb.workshopmongo.dto.CommentDTO;
+import com.github.henriquemb.workshopmongo.repository.PostRepository;
+import com.github.henriquemb.workshopmongo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;

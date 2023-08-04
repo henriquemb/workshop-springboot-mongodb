@@ -1,4 +1,4 @@
-package com.github.henriquemb.springboot_mongodb.dto;
+package com.github.henriquemb.workshopmongo.dto;
 
 import java.io.Serial;
 import java.io.Serializable;

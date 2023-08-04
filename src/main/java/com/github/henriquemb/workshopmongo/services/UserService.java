@@ -1,8 +1,8 @@
-package com.github.henriquemb.springboot_mongodb.services;
+package com.github.henriquemb.workshopmongo.services;
 
-import com.github.henriquemb.springboot_mongodb.domain.User;
-import com.github.henriquemb.springboot_mongodb.repository.UserRepository;
-import com.github.henriquemb.springboot_mongodb.services.exception.ObjectNotFoundException;
+import com.github.henriquemb.workshopmongo.domain.User;
+import com.github.henriquemb.workshopmongo.repository.UserRepository;
+import com.github.henriquemb.workshopmongo.services.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
